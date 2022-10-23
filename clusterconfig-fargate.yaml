@@ -1,0 +1,12 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: my-fargate
+  region: us-east-1
+
+fargateProfiles:
+  - name: fp-default
+    selectors:
+      - namespace: default
+      - namespace: kube-system
